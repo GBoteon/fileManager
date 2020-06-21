@@ -20,36 +20,19 @@
 
     <div class="container">
       <div class="my-3 float-right">
-        <a class="btn btn-primary" href="."><i class="fas fa-sync-alt"></i> Atualizar</a>
+        <button onclick="getAllFiles()" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Atualizar</button>
       </div>
       <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Usuário</th>
+            <th scope="col">ID do Arquivo</th>
             <th scope="col">Nome do Arquivo</th>
             <th scope="col">Conteúdo</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">((user.id))</th>
-            <td>((user.name))</td>
-            <td>((file.name))</td>
-            <td>((file.content))</td>
-          </tr>
-          <tr>
-            <th scope="row">((user.id))</th>
-            <td>((user.name))</td>
-            <td>((file.name))</td>
-            <td>((file.content))</td>
-          </tr>
-          <tr>
-            <th scope="row">((user.id))</th>
-            <td>((user.name))</td>
-            <td>((file.name))</td>
-            <td>((file.content))</td>
-          </tr>
+        <tbody id="files">
         </tbody>
       </table>
 

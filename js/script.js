@@ -25,14 +25,26 @@ function getAllFiles( ) {
             delete item.user; // remover atributo nao necessário
             return item;
         }); 
-        // CODIGO HTML AQUI     
-        console.log( data );
+        // CODIGO HTML AQUI 
+        var w = "";   
+        for (var y= 0; y < data.length; y++){
+            w += "<tr>" + 
+                "<th scope='row'>" + data[y].id_user + "</th>" +
+                    "<td>" + data[y].name_user + "</td>" +
+                    "<td>" + data[y].id + "</td>" +
+                    "<td>" + data[y].file_name + "</td>" +
+                    "<td>" + data[y].content + "</td>" +
+                "</tr>";
+        }
+        
+            
+            document.getElementById('files').innerHTML = w;
     });
     return true;
 }
 
 window.onload = function() {
     
-    this.getAllFiles(  );
+    this.getAllFiles( );
 
 }
