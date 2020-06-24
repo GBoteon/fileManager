@@ -17,8 +17,23 @@ function getJSON(url, callback){
 
 function getAllFiles( ) {
     let url = BASE_URL + 'files';
+    // var dadosGrafico = [];
+    var dadosGrafico = {};
+
     getJSON(url, function( status, data ){
         data.map(function( item ){
+            var indice = item.user.id;       
+
+            if(dadosGrafico[indice] != undefined) {
+                dadosGrafico[indice].qtd++;
+            } else {
+                dadosGrafico[indice] = {
+                    qtd: 1,
+                    name: item.user.user_name
+                };
+            }
+
+
             item.content = item.content.content;
             item.id_user = item.user.id;
             item.name_user = item.user.user_name;
@@ -35,10 +50,11 @@ function getAllFiles( ) {
                     "<td>" + data[y].file_name + "</td>" +
                     "<td>" + data[y].content + "</td>" +
                 "</tr>";
-        }
-        
+        }        
             
-            document.getElementById('files').innerHTML = w;
+        document.getElementById('files').innerHTML = w;
+        document.getElementById('my_dataviz').innerHTML = '';
+        gerarGrafico( dadosGrafico );
     });
     return true;
 }
