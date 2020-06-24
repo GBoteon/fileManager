@@ -44,6 +44,10 @@ body {
   .row {
     flex-direction: column;
   }
+  .btn{
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .btn{
@@ -90,10 +94,6 @@ body {
   border-color: #0062cc;
 }
 
-.align-items-center{
-  align-self: center;
-}
-
 table {
   border-collapse: collapse;
   width: 100%;
@@ -115,3 +115,8 @@ th, td {
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+li{
+  list-style: none;
+}
+

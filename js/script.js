@@ -17,7 +17,6 @@ function getJSON(url, callback){
 
 function getAllFiles( ) {
     let url = BASE_URL + 'files';
-    // var dadosGrafico = [];
     var dadosGrafico = {};
 
     getJSON(url, function( status, data ){
@@ -40,11 +39,11 @@ function getAllFiles( ) {
             delete item.user; // remover atributo nao necessário
             return item;
         }); 
-        // CODIGO HTML AQUI 
+
         var w = "";   
         for (var y= 0; y < data.length; y++){
             w += "<tr>" + 
-                "<th scope='row'>" + data[y].id_user + "</th>" +
+                    "<th scope='row'>" + data[y].id_user + "</th>" +
                     "<td>" + data[y].name_user + "</td>" +
                     "<td>" + data[y].id + "</td>" +
                     "<td>" + data[y].file_name + "</td>" +
