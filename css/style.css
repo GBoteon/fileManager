@@ -45,12 +45,6 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
-  a {
-    width: 100%;
-  }
-}
-
 .btn{
   display: inline-block;
   font-weight: 400;
