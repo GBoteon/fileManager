@@ -71,6 +71,18 @@ body {
   border-color: #007bff;
 }
 
+.btn-exit{
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-exit:hover{
+  color: #000000;
+  background-color: #b6b6b6;
+  border-color: #b6b6b6;
+}
+
 .btn-primary:hover {
   color: #fff;
   background-color: #0069d9;
