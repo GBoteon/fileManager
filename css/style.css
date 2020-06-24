@@ -91,9 +91,14 @@ th, td {
   padding: 8px;
 }
 
-.p3{
+.py-3{
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.px-3{
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
